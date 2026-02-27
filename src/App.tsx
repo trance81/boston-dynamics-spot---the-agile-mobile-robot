@@ -190,7 +190,7 @@ export default function App() {
               <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl bg-black">
                 <video
                   className="w-full h-full object-cover"
-                  src="/boston-dynamics-spot---the-agile-mobile-robot/Spot_Launch.mp4"
+                  src="/boston-dynamics-spot---the-agile-mobile-robot/Spot_Cam.mp4"
                   controls
                   playsInline
                   muted

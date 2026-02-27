@@ -1,10 +1,13 @@
 import { ArrowRight, Play } from 'lucide-react';
+import { useState } from 'react';
 
 interface HeroProps {
   t: any;
 }
 
 export default function Hero({ t }: HeroProps) {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gray-50">
       {/* Background Accents */}
@@ -36,7 +39,11 @@ export default function Hero({ t }: HeroProps) {
                 {t.ctaQuote}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="bg-white text-spot-black border-2 border-spot-black px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-gray-50 transition-all">
+              <button
+                type="button"
+                onClick={() => setIsVideoOpen(true)}
+                className="bg-white text-spot-black border-2 border-spot-black px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-gray-50 transition-all"
+              >
                 <Play className="w-5 h-5 fill-current" />
                 {t.ctaWatch}
               </button>
@@ -64,30 +71,36 @@ export default function Hero({ t }: HeroProps) {
                 referrerPolicy="no-referrer"
               />
             </div>
-            
-            {/* Decorative Elements */}
-            <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-spot-yellow rounded-3xl -z-10 animate-pulse" />
-            <div className="absolute -top-6 -left-6 w-32 h-32 border-4 border-spot-black rounded-3xl -z-10" />
-            
-            {/* Floating Info Card */}
-            <div
-              className="absolute top-1/4 -right-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hidden md:block"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="font-bold">System Online</div>
-                  <div className="text-xs text-gray-500">Autonomous Navigation Active</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
+
+      {isVideoOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center px-4"
+          onClick={() => setIsVideoOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-4xl aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="absolute top-4 right-4 z-10 rounded-full bg-black/60 text-white px-3 py-1 text-sm"
+              onClick={() => setIsVideoOpen(false)}
+            >
+              닫기
+            </button>
+            <video
+              className="w-full h-full object-cover"
+              src="/boston-dynamics-spot---the-agile-mobile-robot/Spot_Launch.mp4"
+              controls
+              autoPlay
+              playsInline
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
