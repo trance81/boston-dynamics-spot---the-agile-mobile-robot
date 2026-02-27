@@ -62,13 +62,7 @@ export default function Applications({ t }: ApplicationsProps) {
                 <h3 className="text-3xl font-bold">{app.title}</h3>
                 <p className="text-xl text-gray-400 leading-relaxed">
                   {app.description}
-                </p>
-                <button className="text-spot-yellow font-bold flex items-center gap-2 hover:underline">
-                  {t.learnMore} 
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </button>
+                </p>                
               </div>
               <div className="flex-1 w-full">
                 <div className="aspect-video rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">

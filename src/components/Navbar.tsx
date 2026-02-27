@@ -63,9 +63,14 @@ export default function Navbar({ language, setLanguage, t }: NavbarProps) {
               </button>
             </div>
 
-            <button className="bg-spot-black text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-spot-yellow hover:text-spot-black transition-all duration-300">
+            <a
+              href="https://planit.etevers.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-spot-black text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-spot-yellow hover:text-spot-black transition-all duration-300"
+            >
               {t.getSpot}
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

@@ -97,10 +97,7 @@ export default function App() {
                 </p>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   {t.fleet.description}
-                </p>
-                <button className="bg-spot-black text-white px-8 py-4 rounded-full font-bold hover:bg-spot-yellow hover:text-spot-black transition-all">
-                  {t.fleet.cta}
-                </button>
+                </p>                
               </div>
             </div>
           </div>
