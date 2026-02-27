@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Globe, Twitter, Linkedin, Youtube, Instagram } from 'lucide-react';
+import logoSvg from '../Resources/Logo-v2.svg';
+import logoPng from '../Resources/logo-blue.png';
 
 interface FooterProps {
   t: any;
@@ -10,13 +12,7 @@ export default function Footer({ t }: FooterProps) {
     <footer className="bg-spot-black text-white pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-24 mb-24">
-          <div className="space-y-12">
-            <div className="flex items-center gap-2">
-              <div className="w-12 h-12 bg-spot-yellow flex items-center justify-center rounded-xl font-display font-black text-2xl text-spot-black">
-                BD
-              </div>
-              <span className="font-display font-bold text-2xl tracking-tighter uppercase">Boston Dynamics</span>
-            </div>
+          <div className="space-y-12">            
             
             <h2 className="text-5xl md:text-7xl font-display font-black leading-none uppercase">
               {t.title1} <br />
