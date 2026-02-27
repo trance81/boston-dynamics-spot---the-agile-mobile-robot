@@ -180,23 +180,22 @@ export default function App() {
         <Applications t={t.applications} />
         <section className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-sm font-bold text-spot-yellow uppercase tracking-[0.3em] mb-4">{t.video.badge}</h2>
-            <p className="text-4xl md:text-6xl font-display font-black mb-12 uppercase">{t.video.title}</p>
-            <div className="relative max-w-4xl mx-auto group cursor-pointer">
-              <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl relative">
-                <img 
-                  src="https://fast.wistia.com/embed/medias/87pk2qnj6i/swatch" 
-                  alt="Spot in Action Video Thumbnail" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
+            <h2 className="text-sm font-bold text-spot-yellow uppercase tracking-[0.3em] mb-4">
+              {t.video.badge}
+            </h2>
+            <p className="text-4xl md:text-6xl font-display font-black mb-12 uppercase">
+              {t.video.title}
+            </p>
+            <div className="relative max-w-4xl mx-auto">
+              <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl bg-black">
+                <video
+                  className="w-full h-full object-cover"
+                  src="/boston-dynamics-spot---the-agile-mobile-robot/Spot_Launch.mp4"
+                  controls
+                  playsInline
+                  muted
+                  loop
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                  <div className="w-20 h-20 bg-spot-yellow rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-110 transition-transform">
-                    <svg className="w-8 h-8 text-spot-black fill-current" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
