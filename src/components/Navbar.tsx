@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Language } from '@/src/translations';
 import logoSvg from '../Resources/Logo-v2.svg';
 import logoPng from '../Resources/logo-blue.png';
+import mkplogoPng from '../Resources/logo-primary.png';
 
 interface NavbarProps {
   language: Language;
@@ -27,17 +28,29 @@ export default function Navbar({ language, setLanguage, t }: NavbarProps) {
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-2">
-              <img
-                src={logoPng}
-                alt="Boston Dynamics logo"
-                className="h-6 md:h-6 w-auto"
-              />
+              <a
+                href=" https://www.etevers.com/main/main.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={logoPng}
+                  alt="Etevers logo"
+                  className="h-6 md:h-6 w-auto"
+                />
+              </a>
               <span className="text-gray-400 text-lg font-semibold">|</span>
-              <img
-                src={logoSvg}
-                alt="Boston Dynamics logo"
-                className="h-40 md:h-40 w-auto"
-              />
+              <a
+                href="https://bostondynamics.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={logoSvg}
+                  alt="Boston Dynamics logo"
+                  className="h-40 md:h-40 w-auto"
+                />
+              </a>
             </div>            
           </div>
 
@@ -64,13 +77,22 @@ export default function Navbar({ language, setLanguage, t }: NavbarProps) {
             </div>
 
             <a
-              href="https://planit.etevers.com"
+              href="https://planit.etevers.com/membership/login.html?return_url=/support/interest_inquiry.html?service_type="
               target="_blank"
               rel="noopener noreferrer"
               className="bg-spot-black text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-spot-yellow hover:text-spot-black transition-all duration-300"
             >
               {t.getSpot}
             </a>
+
+            <a
+              href="https://planitmkp.etevers.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-spot-yellow hover:text-spot-black transition-all duration-300"
+            >
+              {t.getPlanit}
+            </a>            
           </div>
 
           {/* Mobile Menu Button */}

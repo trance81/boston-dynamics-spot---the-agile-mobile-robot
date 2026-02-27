@@ -8,6 +8,7 @@ export const translations = {
       applications: '활용 사례',
       specs: '기술 사양',
       getSpot: 'Spot 도입하기 - Planit',
+      getPlanit: 'Planit Marketplace',
     },
     hero: {
       badge: '전 세계 어디서나 이용 가능',
@@ -152,6 +153,7 @@ export const translations = {
       applications: 'Applications',
       specs: 'Specs',
       getSpot: 'Get Spot - Planit',
+      getPlanit: 'Planit Marketplace',
     },
     hero: {
       badge: 'Now Available Globally',

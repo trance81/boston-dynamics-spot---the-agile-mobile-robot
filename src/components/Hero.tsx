@@ -36,7 +36,7 @@ export default function Hero({ t }: HeroProps) {
             
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://planit.etevers.com"
+                href="https://planit.etevers.com/membership/login.html?return_url=/support/interest_inquiry.html?service_type="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-spot-black text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-spot-yellow hover:text-spot-black transition-all group"
