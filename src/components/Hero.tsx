@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { ArrowRight, Play } from 'lucide-react';
 
 interface HeroProps {
@@ -13,11 +12,7 @@ export default function Hero({ t }: HeroProps) {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-spot-yellow/10 text-spot-yellow text-xs font-bold uppercase tracking-widest mb-6">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-spot-yellow opacity-75"></span>
@@ -58,14 +53,9 @@ export default function Hero({ t }: HeroProps) {
                 <div className="text-sm text-gray-500 uppercase tracking-wider">{t.statCountries}</div>
               </div>
             </div>
-          </motion.div>
+          </div>
           
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
               <img 
                 src="https://bostondynamics.com/wp-content/uploads/2023/12/spot-thermal-camera-electric-utility-scaled.jpg" 
@@ -80,9 +70,7 @@ export default function Hero({ t }: HeroProps) {
             <div className="absolute -top-6 -left-6 w-32 h-32 border-4 border-spot-black rounded-3xl -z-10" />
             
             {/* Floating Info Card */}
-            <motion.div 
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            <div
               className="absolute top-1/4 -right-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hidden md:block"
             >
               <div className="flex items-center gap-4">
@@ -96,8 +84,8 @@ export default function Hero({ t }: HeroProps) {
                   <div className="text-xs text-gray-500">Autonomous Navigation Active</div>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

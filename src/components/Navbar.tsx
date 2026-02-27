@@ -2,6 +2,8 @@ import { motion } from 'motion/react';
 import { Menu, X, Globe } from 'lucide-react';
 import { useState } from 'react';
 import { Language } from '@/src/translations';
+import logoSvg from '../Resources/Logo-v2.svg';
+import logoPng from '../Resources/logo-blue.png';
 
 interface NavbarProps {
   language: Language;
@@ -24,10 +26,19 @@ export default function Navbar({ language, setLanguage, t }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-spot-yellow flex items-center justify-center rounded-lg font-display font-black text-xl">
-              BD
-            </div>
-            <span className="font-display font-bold text-xl tracking-tighter uppercase">Boston Dynamics</span>
+            <div className="flex items-center gap-2">
+              <img
+                src={logoPng}
+                alt="Boston Dynamics logo"
+                className="h-6 md:h-6 w-auto"
+              />
+              <span className="text-gray-400 text-lg font-semibold">|</span>
+              <img
+                src={logoSvg}
+                alt="Boston Dynamics logo"
+                className="h-40 md:h-40 w-auto"
+              />
+            </div>            
           </div>
 
           {/* Desktop Nav */}
