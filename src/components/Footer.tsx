@@ -24,9 +24,22 @@ export default function Footer({ t }: FooterProps) {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <button className="bg-spot-yellow text-spot-black px-10 py-5 rounded-full font-bold text-lg hover:bg-white transition-all">
+              <a
+                href="https://planit.etevers.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-spot-yellow text-spot-black px-10 py-5 rounded-full font-bold text-lg hover:bg-white transition-all"
+              >
                 {t.ctaQuote}
-              </button>              
+              </a>
+              <a
+                href="https://planit.etevers.com/membership/login.html?return_url=/support/interest_inquiry.html?service_type="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 text-spot-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 transition-all"
+              >
+                {t.ctaContact}
+              </a>              
             </div>
           </div>
           
