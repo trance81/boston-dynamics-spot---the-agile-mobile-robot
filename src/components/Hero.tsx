@@ -98,7 +98,7 @@ export default function Hero({ t }: HeroProps) {
             </button>
             <video
               className="w-full h-full object-cover"
-              src="/boston-dynamics-spot---the-agile-mobile-robot/Spot_Launch.mp4"
+              src="/Spot_Launch.mp4"
               controls
               autoPlay
               playsInline
