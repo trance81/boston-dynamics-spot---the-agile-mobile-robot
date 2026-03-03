@@ -3,7 +3,7 @@
  *
  * 수정 가이드
  * - 문구(타이틀, 버튼 글자 등): src/translations.ts 의 hero (ko, en) 수정
- * - 링크·숫자·이미지 설명·영상·팝업 닫기 글자: 아래 상수 구간만 수정. 그 외 코드는 변경 금지
+ * - 링크·숫자·이미지 설명·영상: 아래 상수 구간만 수정. 그 외 코드는 변경 금지
  */
 
 import { ArrowRight, Play } from 'lucide-react';
@@ -17,7 +17,6 @@ const 영상_파일명 = '/Spot_Launch.mp4';
 const 통계_숫자_1 = '1,000+';
 const 통계_숫자_2 = '35+';
 const 이미지_설명 = '전력 설비 현장에서 점검 중인 Spot';
-const 팝업_닫기_버튼_글자 = '닫기';
 
 interface HeroProps {
   t: any;
@@ -114,7 +113,7 @@ export default function Hero({ t }: HeroProps) {
               className="absolute top-4 right-4 z-10 rounded-full bg-black/60 text-white px-3 py-1 text-sm"
               onClick={() => setIsVideoOpen(false)}
             >
-              {팝업_닫기_버튼_글자}
+              {t.closeVideo}
             </button>
             <video
               className="w-full h-full object-cover"

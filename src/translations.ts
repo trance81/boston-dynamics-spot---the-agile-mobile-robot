@@ -20,6 +20,7 @@ export const translations = {
       ctaWatch: 'Spot 작동 영상 보기',
       statDeployed: '배포된 유닛',
       statCountries: '서비스 국가',
+      closeVideo: '닫기',
     },
     overview: {
       badge: 'Spot 개요',
@@ -165,6 +166,7 @@ export const translations = {
       ctaWatch: 'Watch Spot in Action',
       statDeployed: 'Deployed Units',
       statCountries: 'Countries',
+      closeVideo: 'Close',
     },
     overview: {
       badge: 'The Spot Overview',
