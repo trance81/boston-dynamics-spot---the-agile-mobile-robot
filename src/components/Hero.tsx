@@ -1,5 +1,6 @@
 import { ArrowRight, Play } from 'lucide-react';
 import { useState } from 'react';
+import spotThermalHero from '../Resources/spot-thermal-hero.jpg';
 
 interface HeroProps {
   t: any;
@@ -70,10 +71,9 @@ export default function Hero({ t }: HeroProps) {
           <div className="relative flex justify-center">
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl w-full max-w-xl aspect-4/3">
               <img 
-                src="https://bostondynamics.com/wp-content/uploads/2023/12/spot-thermal-camera-electric-utility-scaled.jpg" 
+                src={spotThermalHero} 
                 alt="전력 설비 현장에서 점검 중인 Spot" 
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
           </div>

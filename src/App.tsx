@@ -12,6 +12,11 @@ import Footer from './components/Footer';
 import { motion, useScroll, useSpring } from 'motion/react';
 import { useState } from 'react';
 import { Language, translations } from './translations';
+import imgWoodsideCam from './Resources/spot-woodside-cam.jpg';
+import imgDockIndustrial from './Resources/spot-dock-industrial.jpg';
+import imgLidarMining from './Resources/spot-lidar-mining.jpg';
+import imgSubwayTracks from './Resources/spot-subway-tracks.jpg';
+import imgTrimbleScanner from './Resources/spot-trimble-scanner.jpg';
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('ko');
@@ -63,10 +68,9 @@ export default function App() {
               <div className="relative">
                 <div className="aspect-square rounded-full bg-spot-yellow/5 absolute -z-10 animate-pulse scale-110" />
                 <img 
-                  src="https://www.bostondynamics.com/wp-content/uploads/2023/06/woodside-spot-with-spot-cam-scaled-cropped.jpg" 
+                  src={imgWoodsideCam} 
                   alt="Spot 전면과 카메라 페이로드 근접 사진" 
                   className="w-full h-auto rounded-3xl shadow-2xl"
-                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>
@@ -83,10 +87,9 @@ export default function App() {
                 className="order-2 lg:order-1"
               >
                 <img 
-                  src="https://bostondynamics.com/wp-content/uploads/2026/02/2-spot-dock-industrial.jpg" 
+                  src={imgDockIndustrial} 
                   alt="도크에서 충전 중인 Spot 로봇들" 
                   className="w-full h-auto rounded-3xl shadow-2xl"
-                  referrerPolicy="no-referrer"
                 />
               </motion.div>
               <div className="space-y-8 order-1 lg:order-2">
@@ -112,10 +115,9 @@ export default function App() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="group relative overflow-hidden rounded-3xl">
                 <img 
-                  src="https://bostondynamics.com/wp-content/uploads/2023/12/spot-with-lidar-payload-mining.jpg" 
+                  src={imgLidarMining} 
                   alt="어두운 광산 환경에서 작업하는 Spot" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-8 flex flex-col justify-end">
                   <h3 className="text-2xl font-bold mb-2">{t.hazardous.miningTitle}</h3>
@@ -124,10 +126,9 @@ export default function App() {
               </div>
               <div className="group relative overflow-hidden rounded-3xl">
                 <img 
-                  src="https://www.bostondynamics.com/wp-content/uploads/2023/06/ratp-spot-subway-tracks-spot-cam-ir-scaled-cropped.jpg" 
+                  src={imgSubwayTracks} 
                   alt="지하철 선로 위를 이동하는 Spot" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-8 flex flex-col justify-end">
                   <h3 className="text-2xl font-bold mb-2">{t.hazardous.infraTitle}</h3>
@@ -163,10 +164,9 @@ export default function App() {
               </div>
               <div className="relative">
                 <img 
-                  src="https://www.bostondynamics.com/wp-content/uploads/2023/07/spot-trimble-laser-scanner-acciona-1.jpg" 
+                  src={imgTrimbleScanner} 
                   alt="레이저 스캐너 페이로드를 장착한 Spot" 
                   className="w-full h-auto rounded-3xl shadow-2xl"
-                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>

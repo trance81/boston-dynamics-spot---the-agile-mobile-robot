@@ -1,4 +1,8 @@
 import { motion } from 'motion/react';
+import imgWalkingBehind from '../Resources/spot-walking-behind.jpg';
+import imgConstructionRebar from '../Resources/spot-construction-rebar.jpg';
+import imgFiretruck from '../Resources/spot-firetruck.jpg';
+import imgJplResearch from '../Resources/spot-jpl-research.jpg';
 
 interface ApplicationsProps {
   t: any;
@@ -10,26 +14,26 @@ export default function Applications({ t }: ApplicationsProps) {
       id: "01",
       title: t.items.industrial.title,
       description: t.items.industrial.description,
-      image: "https://bostondynamics.com/wp-content/uploads/2023/07/spot-walking-from-behind.jpg"
+      image: imgWalkingBehind,
     },
     {
       id: "02",
       title: t.items.construction.title,
       description: t.items.construction.description,
-      image: "https://www.bostondynamics.com/wp-content/uploads/2023/07/spot-construction-site-with-rebar1-min.jpg"
+      image: imgConstructionRebar,
     },
     {
       id: "03",
       title: t.items.safety.title,
       description: t.items.safety.description,
-      image: "https://www.bostondynamics.com/wp-content/uploads/2023/07/spot-firetruck1-min.jpg"
+      image: imgFiretruck,
     },
     {
       id: "04",
       title: t.items.research.title,
       description: t.items.research.description,
-      image: "https://www.bostondynamics.com/wp-content/uploads/2023/07/jpl-research-payload1-min.jpg"
-    }
+      image: imgJplResearch,
+    },
   ];
 
   return (
@@ -70,7 +74,6 @@ export default function Applications({ t }: ApplicationsProps) {
                     src={app.image} 
                     alt={app.title} 
                     className="w-full h-full object-cover"
-                    referrerPolicy="no-referrer"
                   />
                 </div>
               </div>

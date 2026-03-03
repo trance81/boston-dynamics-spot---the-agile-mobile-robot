@@ -127,9 +127,24 @@ export default function Navbar({ language, setLanguage, t }: NavbarProps) {
               {link.name}
             </a>
           ))}
-          <button className="w-full bg-spot-black text-white py-4 rounded-xl font-bold">
+          <a
+            href="https://planit.etevers.com/membership/login.html?return_url=/support/interest_inquiry.html?service_type="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full inline-flex items-center justify-center bg-spot-black text-white py-4 rounded-xl font-bold hover:bg-spot-yellow hover:text-spot-black transition-colors"
+            onClick={() => setIsOpen(false)}
+          >
             {t.getSpot}
-          </button>
+          </a>
+          <a
+            href="https://planitmkp.etevers.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full inline-flex items-center justify-center bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-spot-yellow hover:text-spot-black transition-colors"
+            onClick={() => setIsOpen(false)}
+          >
+            {t.getPlanit}
+          </a>
         </motion.div>
       )}
     </nav>
