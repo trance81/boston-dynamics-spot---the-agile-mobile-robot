@@ -1,3 +1,11 @@
+/**
+ * Navbar
+ *
+ * 수정 가이드
+ * - 메뉴 텍스트: src/translations.ts 의 navbar 섹션 수정
+ * - 로고·외부 링크·Planit 버튼: 이 파일의 href/src 값 직접 수정
+ */
+
 import { motion } from 'motion/react';
 import { Menu, X, Globe } from 'lucide-react';
 import { useState } from 'react';
@@ -5,6 +13,13 @@ import { Language } from '@/src/translations';
 import logoSvg from '../Resources/Logo-v2.svg';
 import logoPng from '../Resources/logo-blue.png';
 import mkplogoPng from '../Resources/logo-primary.png';
+
+// --- 수정 영역 (값만 변경, 구문/따옴표 유지) ---
+const 이티버스_홈_링크 = 'https://www.etevers.com/main/main.html';
+const 보스턴다이내믹스_홈_링크 = 'https://bostondynamics.com/';
+const Spot_문의_링크 =
+  'https://planit.etevers.com/membership/login.html?return_url=/support/interest_inquiry.html?service_type=';
+const Planit_마켓플레이스_링크 = 'https://planitmkp.etevers.com';
 
 interface NavbarProps {
   language: Language;
@@ -29,7 +44,7 @@ export default function Navbar({ language, setLanguage, t }: NavbarProps) {
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-2">
               <a
-                href=" https://www.etevers.com/main/main.html"
+                href={이티버스_홈_링크}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -41,7 +56,7 @@ export default function Navbar({ language, setLanguage, t }: NavbarProps) {
               </a>
               <span className="text-gray-400 text-lg font-semibold">|</span>
               <a
-                href="https://bostondynamics.com/"
+                href={보스턴다이내믹스_홈_링크}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -77,7 +92,7 @@ export default function Navbar({ language, setLanguage, t }: NavbarProps) {
             </div>
 
             <a
-              href="https://planit.etevers.com/membership/login.html?return_url=/support/interest_inquiry.html?service_type="
+              href={Spot_문의_링크}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-spot-black text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-spot-yellow hover:text-spot-black transition-all duration-300"
@@ -86,7 +101,7 @@ export default function Navbar({ language, setLanguage, t }: NavbarProps) {
             </a>
 
             <a
-              href="https://planitmkp.etevers.com"
+              href={Planit_마켓플레이스_링크}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-spot-yellow hover:text-spot-black transition-all duration-300"

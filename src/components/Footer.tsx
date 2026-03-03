@@ -1,8 +1,33 @@
+/**
+ * Footer 섹션
+ *
+ * 수정 가이드
+ * - 문구(타이틀, 설명, 버튼 글자 등): src/translations.ts 의 footer 섹션 수정
+ * - 연락처·SNS·회사 로고 링크: 이 파일의 하드코딩된 href / 텍스트 직접 수정
+ * - 개인정보 처리방침 내용: translations.ts 의 privacyPolicy 섹션 수정
+ */
+
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Globe, Twitter, Linkedin, Youtube, Instagram, Facebook, Home, PenSquare } from 'lucide-react';
 import { useState } from 'react';
 import logoSvg from '../Resources/Logo-v2.svg';
 import logoPng from '../Resources/logo-blue.png';
+
+// --- 수정 영역 (값만 변경, 구문/따옴표 유지) ---
+const Footer_CTA_문의_링크 =
+  'https://planit.etevers.com/membership/login.html?return_url=/support/interest_inquiry.html?service_type=';
+const Footer_문의_이메일 = 'te.joo@etevers.com';
+const Footer_문의_전화번호 = '+82 02-6004-7020';
+const Footer_문의_주소 = 'Seoul, South Korea';
+
+const Footer_링크_홈 = 'https://www.etevers.com/main/main.html';
+const Footer_링크_페이스북 = 'https://www.facebook.com/ETEVERS.official/';
+const Footer_링크_인스타그램 = 'https://www.instagram.com/etevers_official/';
+const Footer_링크_블로그 = 'https://blog.naver.com/etevers_official';
+const Footer_링크_유튜브 = 'https://www.youtube.com/@ETEVERS';
+
+const Footer_회사_요약_문장 =
+  '서울특별시 중구 소월로 3 (주)에티버스 | 대표자. 이호준, 김범수, 정인욱 | 대표전화. 02-6004-7000 | 팩스. 02.3446-0085 |';
 
 interface FooterProps {
   t: any;
@@ -28,7 +53,7 @@ export default function Footer({ t }: FooterProps) {
             
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://planit.etevers.com/membership/login.html?return_url=/support/interest_inquiry.html?service_type="
+                href={Footer_CTA_문의_링크}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-spot-yellow text-spot-black px-10 py-5 rounded-full font-bold text-lg hover:bg-white transition-all"
@@ -44,15 +69,15 @@ export default function Footer({ t }: FooterProps) {
               <ul className="space-y-4 text-gray-400">
                 <li className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-spot-yellow" />
-                  <span>te.joo@etevers.com</span>
+                  <span>{Footer_문의_이메일}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-spot-yellow" />
-                  <span>+82 02-6004-7020</span>
+                  <span>{Footer_문의_전화번호}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-spot-yellow" />
-                  <span>Seoul, South Korea</span>
+                  <span>{Footer_문의_주소}</span>
                 </li>
               </ul>
             </div>
@@ -61,11 +86,11 @@ export default function Footer({ t }: FooterProps) {
 
         <div className="flex gap-4 mb-4">
           {[
-            { Icon: Home, href: 'https://www.etevers.com/main/main.html' }, 
-            { Icon: Facebook, href: 'https://www.facebook.com/ETEVERS.official/' },             
-            { Icon: Instagram, href: 'https://www.instagram.com/etevers_official/' },            
-            { Icon: PenSquare, href: 'https://blog.naver.com/etevers_official' },
-            { Icon: Youtube, href: 'https://www.youtube.com/@ETEVERS' },
+            { Icon: Home, href: Footer_링크_홈 }, 
+            { Icon: Facebook, href: Footer_링크_페이스북 },             
+            { Icon: Instagram, href: Footer_링크_인스타그램 },            
+            { Icon: PenSquare, href: Footer_링크_블로그 },
+            { Icon: Youtube, href: Footer_링크_유튜브 },
           ].map(({ Icon, href }, i) => (
             <a
               key={i}
@@ -80,7 +105,7 @@ export default function Footer({ t }: FooterProps) {
         </div>
 
         <div className="pt-1 text-left text-sm text-white-400 mb-2">
-          서울특별시 중구 소월로 3 (주)에티버스 | 대표자. 이호준, 김범수, 정인욱 | 대표전화. 02-6004-7000 | 팩스. 02.3446-0085 |{' '}
+          {Footer_회사_요약_문장}{' '}
           <button
             type="button"
             onClick={() => setIsPrivacyOpen(true)}

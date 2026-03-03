@@ -1,4 +1,15 @@
+/**
+ * Specs 섹션
+ *
+ * 수정 가이드
+ * - 문구 및 스펙 항목: src/translations.ts 의 specs 섹션 수정
+ * - 레이아웃/스타일: 이 파일의 JSX 구조는 변경하지 않는 것을 권장
+ */
+
 import { motion } from 'motion/react';
+
+// --- 수정 영역 (값만 변경, 구문/따옴표 유지) ---
+const 펌웨어_버전 = 'v3.3.1_STABLE';
 
 interface SpecsProps {
   t: any;
@@ -17,7 +28,7 @@ export default function Specs({ t }: SpecsProps) {
             </p>
             <div className="p-6 bg-spot-black text-white rounded-2xl">
               <div className="text-xs uppercase tracking-widest text-spot-yellow mb-2">{t.firmware}</div>
-              <div className="text-xl font-mono">v3.3.1_STABLE</div>
+              <div className="text-xl font-mono">{펌웨어_버전}</div>
             </div>
           </div>
           

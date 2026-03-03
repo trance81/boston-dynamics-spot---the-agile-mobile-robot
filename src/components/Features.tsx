@@ -1,6 +1,16 @@
+/**
+ * Features 섹션
+ *
+ * 수정 가이드
+ * - 문구(타이틀, 설명, 항목 텍스트): src/translations.ts 의 features 섹션 수정
+ * - 아이콘 순서/종류: 이 파일의 icons 배열 및 JSX 구조 수정
+ */
+
 import { motion } from 'motion/react';
 import { Shield, Zap, Eye, Cpu, Move, Settings } from 'lucide-react';
 
+// --- 수정 영역 (값만 변경, 구문/따옴표 유지) ---
+// features 항목과 1:1 대응하는 아이콘 순서
 const icons = [Move, Eye, Cpu, Settings, Zap, Shield];
 
 interface FeaturesProps {

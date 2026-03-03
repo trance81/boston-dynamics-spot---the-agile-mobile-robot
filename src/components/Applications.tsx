@@ -1,8 +1,22 @@
+/**
+ * Applications 섹션
+ *
+ * 수정 가이드
+ * - 문구(타이틀, 설명, 각 항목 텍스트): src/translations.ts 의 applications 섹션 수정
+ * - 각 항목 이미지: 이 파일 상단의 import 경로 및 apps 배열의 image 값 수정
+ */
+
 import { motion } from 'motion/react';
 import imgWalkingBehind from '../Resources/spot-walking-behind.jpg';
 import imgConstructionRebar from '../Resources/spot-construction-rebar.jpg';
 import imgFiretruck from '../Resources/spot-firetruck.jpg';
 import imgJplResearch from '../Resources/spot-jpl-research.jpg';
+
+// --- 수정 영역 (값만 변경, 구문/따옴표 유지) ---
+const 응용_산업_이미지 = imgWalkingBehind;
+const 응용_건설_이미지 = imgConstructionRebar;
+const 응용_안전_이미지 = imgFiretruck;
+const 응용_연구_이미지 = imgJplResearch;
 
 interface ApplicationsProps {
   t: any;
@@ -14,25 +28,25 @@ export default function Applications({ t }: ApplicationsProps) {
       id: "01",
       title: t.items.industrial.title,
       description: t.items.industrial.description,
-      image: imgWalkingBehind,
+      image: 응용_산업_이미지,
     },
     {
       id: "02",
       title: t.items.construction.title,
       description: t.items.construction.description,
-      image: imgConstructionRebar,
+      image: 응용_건설_이미지,
     },
     {
       id: "03",
       title: t.items.safety.title,
       description: t.items.safety.description,
-      image: imgFiretruck,
+      image: 응용_안전_이미지,
     },
     {
       id: "04",
       title: t.items.research.title,
       description: t.items.research.description,
-      image: imgJplResearch,
+      image: 응용_연구_이미지,
     },
   ];
 
